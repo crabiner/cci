@@ -12,7 +12,6 @@ What if you cannot use additional data structures?
 #include <iostream>
 
 
-#include "Test/MergeSort_test.h"
 
 using namespace std;
 
@@ -56,19 +55,5 @@ bool MyStr::isUniqueAscii()
 
 
 
-int main()
-{
-#if 0
-	string str("aAbb");
-	MyStr string1("aAbb");
-	string1.isUniqueAscii();
-
-	MyStr string2("aAbcdefgBCD");
-	string2.isUniqueAscii();
-#else
-	MergeSortTest();
-#endif
-	return 0;
-}
 
 
