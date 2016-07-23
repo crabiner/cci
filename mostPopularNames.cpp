@@ -4,7 +4,6 @@
 #include <vector>
 #include <utility>      // std::pair
 #include <iostream>     // std::cout
-#include <memory>
 using namespace std;
 
 
@@ -12,7 +11,7 @@ class NameSet
 {
 public:
 	NameSet(){}
-	~NameSet(){cout<< "destroyed"<<endl;}
+	~NameSet(){}
 
 	NameSet(string name, int frequency)
 	{
@@ -103,6 +102,7 @@ unordered_map<string, int> convertToMap(unordered_map<string, NameSet*> groups)
 	{
 		cout << "first="<<group.first<<" getRootName="<<group.second->getRootName()<< " size="<<group.second->size()<<endl;
 		result.insert( make_pair(group.second->getRootName(),group.second->getFrequency()));
+		delete group.second;
 	}
 	return result;
 }
