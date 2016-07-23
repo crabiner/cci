@@ -9,7 +9,7 @@
 
 #include "Test/MergeSort_test.h"
 void quickSearchTest();
-
+void mostPopularNames();
 int main()
 {
 #if 0
@@ -20,8 +20,10 @@ int main()
 	MyStr string2("aAbcdefgBCD");
 	string2.isUniqueAscii();
 	MergeSortTest();
-#else
+
 	quickSearchTest();
+#else
+	mostPopularNames();
 #endif
 	return 0;
 }
